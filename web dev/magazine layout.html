@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            gap: 2px;
+            grid-template-areas:
+            "box1 box1 box2 "
+            "box1 box1 box3"
+            "box4 box5 box6"
+            
+        }
+        .box{
+            background-color: lightblue;
+            min-height: 100px;
+            color:black;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 2px 0px 10px black;
+            align-items: center;
+            justify-content: center;
+            display:flex;
+        }
+
+    </style>
+  </head>
+    <body>
+        <div class="container">
+            <div class="box"style="grid-area:box1">HEADER</div>
+            <div class="box"style="grid-area:box2">MAINCONTENT</div>
+            <div class="box"style="grid-area:box3">SIDEBAR</div>
+            <div class="box"style="grid-area:box4">CARD1</div>
+            <div class="box"style="grid-area:box5">CARD2</div>
+            <div class="box"style="grid-area:box6">FOOTER</div>
+           
+            
+        </div>
+    </body>
+</html>

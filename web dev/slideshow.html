@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upward Slideshow</title>
+
+  <style>
+    body{
+      width: 100%;
+      hight: 100%;
+      background-image: linear-gradient(to bottom left , black, white,pink,violet );
+    }
+    .slideshow {
+      width: 500px;
+      height: 500px;
+      border: 10px solid black;
+      overflow: hidden;
+      margin: 40px auto;
+    }
+
+    .slides {
+      animation: moveUp 12s linear infinite;
+    }
+
+    .slides img {
+      display: block;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    @keyframes moveUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-1500px);
+      }
+    }
+
+    .slideshow:hover .slides {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slideshow">
+  <div class="slides">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Spiderman.JPG/1200px-Spiderman.JPG" alt="Spider-Man">
+
+    <img src="https://pngimg.com/uploads/spider_man/spider_man_PNG34.png" alt="Spider-Man">
+
+    <img src="https://reactormag.com/wp-content/uploads/2018/03/Raimi-Spiderman01.jpg" alt="Spider-Man">
+  </div>
+</div>
+</body>
+</html>
